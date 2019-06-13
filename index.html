@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- jQuery CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Font Awesome Link -->
+    <script src="https://kit.fontawesome.com/fd64f95310.js"></script>
+    <!-- Bootstrap CDN Link -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/sandstone/bootstrap.min.css" rel="stylesheet" integrity="sha384-G3Fme2BM4boCE9tHx9zHvcxaQoAkksPQa/8oyn1Dzqv7gdcXChereUsXGx6LtbqA" crossorigin="anonymous">
+    <!-- Google Font Link -->
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- CSS override File -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- Firebase Core JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <!-- Specific Firebase products we want -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+    <title>Train Scheduler</title>
+</head>
+<body>
+<header>
+    <div class="jumbotron jumbotron-fluid border border-secondary rounded">
+        <div class="container">
+            <h1 class="display-2 text-center"><i class="fas fa-subway"></i>  Train Scheduler</h1>
+        </div>
+    </div>
+</header>
+<div class="container">
+   <br>
+    <div class="row">
+            <div class="col-md-10 offset-md-1 bg-light border border-secondary border-bottom-0 rounded">
+                <h3><i class="fas fa-clock"></i>     Current Train Schedule</h3>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 border border-secondary rounded">
+           <br>
+            <table class="table table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (Min.)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+                <tbody class="train-table-body">
+                    <tr class="table-light">
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                        <td>Column content</td>
+                    </tr>
+                </tbody>
+              </table> 
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 bg-light border border-secondary border-bottom-0 rounded">
+            <h3><i class="fas fa-plus-circle"></i>     Add Train</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-10 offset-md-1 border border-secondary rounded">
+               <br>
+                <form>
+                    <fieldset>
+                        <div class="form-group">
+                            <label for="train-name">Train Name</label>
+                            <input type="text" class="form-control" id="train-name" placeholder="640 Keystone Service">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input type="text" class="form-control" id="destination" placeholder="Philadelphia, PA">
+                        </div>
+                        <div class="form-group">
+                            <label for="train-time">First Train Time</label>
+                            <input type="text" class="form-control" id="train-time" placeholder="HH:mm (military time)">
+                        </div>
+                        <div class="form-group">
+                            <label for="frequency">Frequency</label>
+                            <input type="text" class="form-control" id="frequency" placeholder="Minutes">
+                        </div> 
+                        <button type="submit" class="btn btn-outline-secondary" id="submit">Submit</button>
+                    </fieldset>
+                </form>
+                <br>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+
+    <!-- JS File Link -->
+    <script src="scheduler.js"></script>
+</body>
+</html>

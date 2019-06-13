@@ -1,0 +1,11 @@
+body {
+    background-color: whitesmoke;
+}
+
+.jumbotron h1, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+h3 {
+    padding: 10px;
+}
